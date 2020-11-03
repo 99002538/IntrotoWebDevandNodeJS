@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function sayHello(){
+
+
+            uname=document.getElementById("name").value;
+
+            city=document.getElementById("city").value;
+
+            textu=document.getElementById("textareaa").value;
+
+            document.getElementById("mydiv").innerHTML=textu;
+
+            //document.write(uname,city);
+
+            //document.getElementById("mydiv").innerHTML='shoot the kuruvi';
+
+            //document.getElementById("mypara").innerText='i want my goddamn kuruvi';
+        }
+
+    </script>
+</head>
+<body>
+   
+    <textarea id="textareaa" rows="3" cols="3" onkeyup="sayHello()"></textarea>
+        Enter Name
+        <input type="text" value="enter name" id="name">
+        Enter City
+        <input type="text" value="enter city" id="city">
+
+        <input type="button" value="register" onclick="sayHello()">
+
+<div id="mydiv" style="background-color:goldenrod;"></div>
+
+<p id="mypara" style="background-color: honeydew;"></p>
+  
+
+
+</body>
+</html>

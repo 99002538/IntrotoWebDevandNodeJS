@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div id="divv"></div>
+    <div id="divvu"></div>
+    <script>
+        username=localStorage.getItem('uname');
+        msg=localStorage.getItem('message');
+        
+        document.getElementById("divv").innerHTML=username+msg;
+        
+            </script>
+             <script>
+                username1=sessionStorage.getItem('uname');
+                msg1=sessionStorage.getItem('message');
+                
+                document.getElementById("divvu").innerHTML=username1+msg1;
+                
+                    </script>
+
+</body>
+</html>

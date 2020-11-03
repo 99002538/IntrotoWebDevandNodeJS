@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous">
+    
+    </script>
+
+    <script>
+
+$(document).ready(function(){
+
+$('#show').click(function(){
+
+name=$('#name').val();
+
+city=$('#city').val();
+
+$('#myid').html('Welcome '+name+' from '+city);
+
+});
+
+
+});
+
+    </script>
+</head>
+<body>
+    <p>Name <input type="text"  id="name"> </p>
+    <br/>
+
+    <p> city<input type="text" id="city"> </p>
+    <br/>
+
+
+    <button id="show"> Show </button>
+
+    <div id="myid"></div>
+</body>
+</html>

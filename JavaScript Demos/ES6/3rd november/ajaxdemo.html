@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script>
+
+$(document).ready(function(){
+
+
+$('#mybutton').click(function(){
+
+
+$.get('json.json',function(data,status){
+
+data.forEach(book=>{
+
+    var str='';
+
+    for(const prop in book){
+
+str+=prop+' '+book[prop]+' '+'<br>';
+
+    }
+
+    $('#mydiv').append(str).append('<br>');
+
+    });
+
+
+
+});
+
+
+});
+
+
+});
+
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+var result;
+
+function findLocation(){
+
+result=document.getElementById('myid');
+
+if(navigator.geolocation){
+
+    navigator.geolocation.getCurrentPosition(success,error);
+}
+
+else{
+
+    result.innerHTML="your browser doesnot support geo";
+}
+
+}
+
+function successCall(position){
+
+lat=position.coords.latitude;
+
+lon=position.coords.longitude;
+
+result.innerHTML=lat+' '+lon;
+
+maplink.href = 'https://www.openstreetmap.org/#map=18/' + lat + '/' + lon;
+maplink.innerText = 'showMap';
+
+
+}
+
+function error(){
+
+result.innerText='unable to locate';
+
+}
+
+
+
+    </script>
+</head>
+<body>
+    <button onclick="getLocation()"> Geolocation </button>
+    <div id="myid"></div>
+    <a href="" id="maplink:"></a>
+</body>
+</html>

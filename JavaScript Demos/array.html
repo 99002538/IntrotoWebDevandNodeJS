@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+var arr=[10,30,56,98,76];
+
+for(let i=0;i<arr.length;i++){
+
+    document.write(arr[i]+" ");
+
+}
+
+document.write("using for in <br/>");
+
+for(const i in arr){
+
+    document.write(arr[i]+"<br/> ");
+}
+
+document.write("Using For Of <br />");
+
+for(const ele of arr){
+
+    document.write(ele+"<br/> ");
+}
+
+document.write("Using forEach <br/>");
+
+arr.forEach(function(value,index,arr){
+
+document.write(index+' '+value+"<br/> ");
+
+});
+
+arr.forEach(function(element,index,arr){
+
+    document.write(element+"<br/> ");
+});
+
+arr.forEach(function(element,index,arr){
+
+document.write(arr[index]+"<br/> ");
+});
+
+arr.forEach((elem)=>{
+
+document.write(elem+" ");
+
+});
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

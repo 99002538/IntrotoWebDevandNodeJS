@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script>
+
+$(document).ready(function(){
+
+    $('#allbutton').click(function(){
+
+        var url='http://localhost:3000/showAll';
+        $.get(url,function(data,status){
+
+            data.forEach(book=>{
+
+                var str='';
+
+                for(const prop in book){
+
+                    str+=prop+''+book[prop]+''+'<br>';
+
+                }
+
+                $('#mydiv').append(str).append('<br>');
+
+            });
+        })
+    });
+
+    $('#authbutton').click(function(){
+
+        var url='http://localhost:3000/showByAuthor';
+
+        var authchoice=$('author').val();
+
+        $.get(url,{author:authchoice},function(data,status){
+
+            data.forEach(book=>{
+
+                var str='';
+
+                for(const prop in book){
+
+                    str+=prop+''+book[prop]+''+'<br>';
+
+                }
+
+                $('#mydiv').append(str).append('<br>');
+
+
+            })
+
+
+        });
+    });
+
+    $('#catbutton').click(function(){
+
+    })
+})
+
+
+    </script>
+</head>
+<body>
+    <button id="allbutton"> Show BOOKS </button>
+    <input type="text" id="author">
+    <button id="authbutton">Search by Author</button>
+    <br/>
+    <input type="text" id="category"> 
+    <button id="catbutton">Search by Ctegory</button>
+    <div id="mydiv"></div>
+</body>
+</html>
